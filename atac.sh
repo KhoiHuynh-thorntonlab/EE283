@@ -28,12 +28,6 @@ files="/bio/khoih/filename.txt"
 rawfix=`head -n $SGE_TASK_ID $files | tail -n 1`
 
 
-
-
-for i in $(ls *R1.fq.gz);do ln -s $i $(grep $(echo $i |cut -f5 -d"_") README.ATACseq.txt | awk -v OFS="_" '{print "ATAC",$2,$3,$4,"R1.fq.gz"}'); done
-for i in $(ls *R2.fq.gz);do ln -s $i $(grep $(echo $i |cut -f5 -d"_") README.ATACseq.txt | awk -v OFS="_" '{print "ATAC",$2,$3,$4,"R2.fq.gz"}'); done
-
-
 # to check for fastq format
 
 perl ../../fastqFormatDetect.pl ADL06_1_1.fq.gz
