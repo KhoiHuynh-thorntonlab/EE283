@@ -59,6 +59,8 @@ this script works as intended in the tutorial. (note, the number from our sample
 
 Generated jpeg is betweensampleboxplot.jpeg
 
+![](betweensampleboxplot.jpeg)
+
 ## rlog transformation:
 
 DESeq2 offers transformations for count data that stabilize the variance across the mean: the regularized logarithm (rlog). This function works on our custome files too:
@@ -74,6 +76,8 @@ dev.off()
 ```
 
 generated jpeg is named effectoftransformation.jpeg
+
+![](effectoftransformation.jpeg)
 
 ## clustering sample to sample distance: 
 
@@ -95,6 +99,7 @@ This sample script also works without showing any error using our custom files.
 
 generated jpeg is named sampletosampledistance.jpeg
 
+![](sampletosampledistance.jpeg)
 
 ## PCA plot
 
@@ -107,6 +112,9 @@ dev.off()
 As expected, these script also work on our custom files. 
 
 generated jpeg is name PCAplot.jpeg
+
+![](PCAplot.jpeg)
+
 
 ## differential analysis:
 The last thing I atttempted to do is differential anaylysis:
