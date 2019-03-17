@@ -1,0 +1,29 @@
+estimating size factors
+estimating dispersions
+gene-wise dispersion estimates
+mean-dispersion relationship
+-- note: fitType='parametric', but the dispersion trend was not well captured by the
+   function: y = a/x + b, and a local regression fit was automatically substituted.
+   specify fitType='local' or 'mean' to avoid this message next time.
+final dispersion estimates
+fitting model and testing
+DataFrame with 6 rows and 2 columns
+                       type                                        description
+                <character>                                        <character>
+baseMean       intermediate          mean of normalized counts for all samples
+log2FoldChange      results log2 fold change (MLE): condition eyedisk vs brain
+lfcSE               results         standard error: condition eyedisk vs brain
+stat                results         Wald statistic: condition eyedisk vs brain
+pvalue              results      Wald test p-value: condition eyedisk vs brain
+padj                results                               BH adjusted p-values
+
+out of 40 with nonzero total read count
+adjusted p-value < 0.1
+LFC > 0 (up)       : 7, 18%
+LFC < 0 (down)     : 10, 25%
+outliers [1]       : 0, 0%
+low counts [2]     : 0, 0%
+(mean count < 343)
+[1] see 'cooksCutoff' argument of ?results
+[2] see 'independentFiltering' argument of ?results
+
