@@ -2,6 +2,10 @@
 
 The goal of the final project is to trick the DESeq2 packages to analyze ATAC data set on peaks instead of gene. Here is what I have found so far.
 
+# reference: 
+
+http://folk.uio.no/jonbra/MBV-INF4410_2017/exercises/2017-12-07_R_DESeq2_exercises_without_results.html
+
 # note:
 
 all generated files, images, and results are uploaded to this repo with their names as indicated in corresponding section in this readme. The result files/iumages name is listed at the end of their corresponding section as well. 
