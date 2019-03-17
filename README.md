@@ -2,6 +2,10 @@
 
 The goal of the final project is to trick the DESeq2 packages to analyze ATAC data set on peaks instead of gene. Here is what I have found so far.
 
+# note:
+
+all generated files, images, and results are uploaded to this repo with their names as indicated in corresponding section in this readme. The result files/iumages name is listed at the end of their corresponding section as well. 
+
 # file requirement:
 
 Deseq2 requires 2 separated files. the first file is raw count of gene from samples (raw count of peak submit among all replicates in our case). The second files is a description files for all the sample with condition column can be change to a different classification system. Brain vs Eye disk vs wing disk etc. The two input files must be tab separated. 
@@ -47,9 +51,13 @@ After loading in data, I ran some simplot plot/analysis commands from deseq2 tut
 ## boxplot of count distribution between samples.
 
 ```
+jpeg("betweensampleboxplot.jpeg")
 boxplot(Mnemiopsis_count_data)
+dev.off()
 ```
 this script works as intended in the tutorial. (note, the number from our sample file is not actual raw count so all created images don't have any analysis power).
+
+Generated jpeg is betweensampleboxplot.jpeg
 
 ## rlog transformation:
 
@@ -64,6 +72,8 @@ plot(log2( 1 + counts(dds)[ , 1:2] ),pch=16, cex=0.3, main = "log2")
 plot(assay(rld)[ , 1:2],pch=16, cex=0.3, main = "rlog")
 dev.off()
 ```
+
+generated jpeg is named effectoftransformation.jpeg
 
 ## clustering sample to sample distance: 
 
@@ -83,6 +93,9 @@ dev.off()
 
 This sample script also works without showing any error using our custom files.
 
+generated jpeg is named sampletosampledistance.jpeg
+
+
 ## PCA plot
 
 deseq2 also provide pca analysis using r log transformed count as follow.
@@ -92,6 +105,8 @@ plotPCA(rld, intgroup=c("condition"))
 dev.off()
 ```
 As expected, these script also work on our custom files. 
+
+generated jpeg is name PCAplot.jpeg
 
 ## differential analysis:
 The last thing I atttempted to do is differential anaylysis:
@@ -134,6 +149,7 @@ outliers [1]       : 0, 0%
 low counts [2]     : 0, 0%
 (mean count < 343)
 ```
+the file result is named differentialanalysis.txt
 
 # Future direction:
 
@@ -141,5 +157,5 @@ As expected and shown, the custom file can contains counts from any feature type
 
 # note:
 
-all generated files, images, and results are uploaded to this repo with their names as indicated in corresponding section in this readme. 
+all generated files, images, and results are uploaded to this repo with their names as indicated in corresponding section in this readme. The result files/iumages name is listed at the end of their corresponding section as well. 
 
