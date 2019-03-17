@@ -1,0 +1,5 @@
+Sample	type	condition
+BR1	ATAC	brain
+BR2	ATAC	brain
+ED1	ATAC	eyedisk
+ED2	ATAC	eyedisk
